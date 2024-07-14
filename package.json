@@ -1,14 +1,14 @@
 {
-  "name": "simple-todo",
+  "name": "nest-js",
   "version": "0.0.1",
-  "description": "Hello this is simple version",
+  "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build":"npm run prisma:generate && nest build",
+    "build": "npm run prisma:generate && nest build",
     "prisma:generate": "prisma generate",
-    "postinstall": "prisma geenrate",
+    "postinstall": "prisma generate",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
