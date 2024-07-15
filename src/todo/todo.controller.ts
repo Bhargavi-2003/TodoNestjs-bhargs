@@ -15,9 +15,9 @@ export class TodoController {
   @UseGuards(JwtAuthGuard)
   @ApiOperation({description:"To add new task wrt user email",summary:"Add a new task"})
   @Post()
-  async create(@Body() createTodoDto: CreateTodoDto, @UserEmail() UserEmail: string) {
+  async create(@Body() createTodoDto: CreateTodoDto, @UserEmail() userEmail: string) {
     console.log("output")
-    return await this.todoService.create(createTodoDto,UserEmail);
+    return await this.todoService.create(createTodoDto,userEmail);
   }
 
   @ApiBearerAuth()

@@ -15,15 +15,18 @@ export class AuthService {
   async login(loginData: LoginDTO) {
 
     const {email,password} = loginData;
+    console.log(email)
+    console.log(password)
     const user = await this.databaseService.user.findFirst({
       where: {
         email: email,
-      },
-    });
+      }
+    })
 
     if (!user) {
       throw new NotFoundException('User does not exist!');
     }
+    console.log(user)
     const validatePassword = await bcrypt.compare(password,user.password);
 
     if (!validatePassword) {

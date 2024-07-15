@@ -10,5 +10,5 @@ export class CreateTodoDto {
     @ApiPropertyOptional()
     @IsOptional()
     @IsString()
-    description?: string
+    description: string
 }
